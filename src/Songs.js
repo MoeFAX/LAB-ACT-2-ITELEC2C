@@ -1,12 +1,16 @@
 import { songData } from "./data";
 import Card from "./Card";
-function Songs() {
+
+const Songs = () => {
+  const MonthofSong = "February";
   return (
     <div className="songlist">
-      {songData.map((card) => (
-        <Card cardObj={card} key={card.no} />
-      ))}
+      {songData.map((card) =>
+        card.month === MonthofSong ? (
+          <Card cardObj={card} key={card.id} />
+        ) : null
+      )}
     </div>
   );
-}
+};
 export default Songs;

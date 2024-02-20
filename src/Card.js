@@ -1,6 +1,7 @@
 function Card(props) {
+  const changebackground = true;
   return (
-    <div className="card">
+    <div className={changebackground ? "card2" : "card1"}>
       <h1>{props.cardObj.no}</h1>
       <hr></hr>
       <span className="name">{props.cardObj.songName}</span>
